@@ -1,8 +1,7 @@
 
-
 def is_a_palidrome(string):
     my_string = (string.replace(" ", "")).lower()
-    if my_string == " " or my_string == "":
+    if my_string == "":
         return False
     div = (len(my_string)) // 2
     for i in range(div):
