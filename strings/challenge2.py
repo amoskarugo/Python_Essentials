@@ -31,14 +31,18 @@ LED = [zero, one, two, three, four, five, six, seven, eight, nine]
 
 
 while True:
-    num = input("Enter a number to display on the LED display: ")
-    if type(num) != int:
-        print("Please enter an integer value")
-        continue
-    else:
+    try:
+        num = input("Enter a number to display on the LED: ")
+        if num == " ":
+            print("You entered nothing")
+            continue
+        for n in num:
+            print(LED[int(n)], end="")
+        print()
         break
+    except ValueError:
+        print("Please enter a number only")
+        continue
 
-for l in LED:
-    print(l)
-print(negativ_sign)
+
 
