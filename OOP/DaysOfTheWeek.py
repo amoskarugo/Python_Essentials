@@ -6,7 +6,6 @@ class Weeker:
     days = ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun']
     def __init__(self, day):
         self.week_day = day
-        self.days = ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun']
         # Write code here.
         #
 
@@ -55,7 +54,7 @@ try:
     print(weekday)
     weekday.add_days(2)
     print(weekday)
-    weekday.subtract_days(1)
+    weekday.subtract_days(23)
     print(weekday)
     #weekday = Weeker('Monday')
 except WeekDayError:
