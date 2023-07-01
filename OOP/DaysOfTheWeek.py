@@ -3,9 +3,13 @@ class WeekDayError(Exception):
 	
 
 class Weeker:
-    days = ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun']
+    days = ['mon', 'tue', 'wed', 'thur', 'fri', 'sat', 'sun']
     def __init__(self, day):
-        self.week_day = day
+        try:
+            self.week_day = day
+            p = self.days.index(self.week_day.lower())
+        except ValueError:
+            raise WeekDayError
         # Write code here.
         #
 
@@ -56,6 +60,6 @@ try:
     print(weekday)
     weekday.subtract_days(23)
     print(weekday)
-    #weekday = Weeker('Monday')
+    weekday = Weeker('Monday')
 except WeekDayError:
     print("Sorry, I can't serve your request.")
